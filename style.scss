@@ -1,0 +1,68 @@
+// variables
+$bg-color:#333;
+$damilola:#3498db;
+$text-color:#7c2626;
+$padding:20px;
+
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $padding;
+    color: $text-color;
+
+    .logo{
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .nav-links{
+        display: flex;
+        list-style: none;
+        gap: 15px;
+        margin: 0;
+        padding: 0;
+
+        li {
+            @media (max-width:768px){
+                text-align: start;
+                margin: 10px 0;
+            }
+
+            a{
+                text-decoration: none;
+                color: #7c2626;
+            }
+        }
+
+        @media (max-width:768px){
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 60px;
+            right: 20px;
+            margin-top: 20px;
+            background-color: $bg-color;
+            width: 200px;
+            border-radius: 5px;
+        }
+    }
+
+
+    .hamburger{
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        display: none;
+
+        @media (max-width:768px){
+            display: block;
+        }
+        
+    }
+}
